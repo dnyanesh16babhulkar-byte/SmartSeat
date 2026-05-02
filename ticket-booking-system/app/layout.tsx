@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "SmartSeat — Book Smarter, Not Harder",
+  description:
+    "DSA-powered online ticket booking. Trie-accelerated search, Segment Tree availability, and real-time seat sync. Find the perfect seat instantly.",
+  keywords: ["ticket booking", "segment tree", "trie", "DSA", "real-time", "seats"],
+};
 
 export default function RootLayout({
   children,
@@ -7,10 +15,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-black text-white">
-        <div className="max-w-7xl mx-auto px-6">
-          {children}
-        </div>
+      <body suppressHydrationWarning>
+        {children}
       </body>
     </html>
   );
